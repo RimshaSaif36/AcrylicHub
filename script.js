@@ -1,87 +1,87 @@
 const products = [
     {
         id: 1,
-        name: "Elegant A-Line Dress",
-        description: "This elegant A-Line dress is perfect for any occasion. Made with high-quality fabric, it offers a comfortable fit and a sophisticated look. Available in various sizes and colors.",
-        price: Math.round(49.99 * 100), // Convert 49.99 to 4999
-        image: "images/product_1.jpg"
+        name: "Scenic Nature Landscape",
+        description: "A serene natural landscape bringing calm and beauty to any space.",
+        price: 4999, // Convert 49.99 to 4999
+        image: "images/P1.jpg"
     },
     {
         id: 2,
-        name: "Chiffon Maxi Dress",
-        description: "Flowy and fashionable, this chiffon maxi dress is ideal for summer days or evening events. Lightweight and breathable fabric ensures maximum comfort.",
-        price: Math.round(59.99 * 100), // Convert 59.99 to 5999
-        image: "images/product_2.jpg"
+        name: "Handmade Painting wall art",
+        description: "Beautifully crafted handmade painting wall art that adds a unique and artistic touch to your living space.",
+        price: 5999, // Convert 59.99 to 5999
+        image: "images/P2.jpg"
     },
     {
         id: 3,
-        name: "Floral Print Sundress",
-        description: "Brighten up your wardrobe with this beautiful floral print sundress. Perfect for casual outings and beach vacations. Soft and comfortable material.",
-        price: Math.round(69.99 * 100), // Convert 69.99 to 6999
-        image: "images/product_3.jpg"
+        name: "Pillar Stand Mirror Base",
+        description: "A sturdy and elegant pillar stand mirror base that enhances the aesthetic of any room while providing functional support for your mirror.",
+        price: 6999, // Convert 69.99 to 6999
+        image: "images/P3.jpg"
     },
     {
         id: 4,
-        name: "Classic Little Black Dress",
-        description: "A timeless classic, the little black dress is a must-have for every wardrobe. Versatile and chic, suitable for formal gatherings or a night out.",
-        price: Math.round(79.99 * 100), // Convert 79.99 to 7999
-        image: "images/product_4.jpg"
+        name: "Customized Acrylic Name Plate",
+        description: "A sleek and modern customized acrylic name plate that adds a personal and stylish touch to any space.",
+        price: 7999, // Convert 79.99 to 7999
+        image: "images/P4.jpg"
     },
     {
         id: 5,
-        name: "Bohemian Rhapsody Dress",
-        description: "Embrace your free spirit with this bohemian rhapsody dress. Featuring intricate patterns and a relaxed fit, it's perfect for festivals and casual wear.",
-        price: Math.round(89.99 * 100), // Convert 89.99 to 8999
-        image: "images/product_5.jpg"
+        name: "Wall Mount Photo Frame",
+        description: "A stylish and functional wall mount photo frame that beautifully displays your cherished memories while enhancing your home decor.",
+        price: 8999, // Convert 89.99 to 8999
+        image: "images/P5.jpg"
     },
     {
         id: 6,
-        name: "Vintage Swing Dress",
-        description: "Step back in time with this charming vintage swing dress. Its flattering silhouette and retro design make it a unique addition to your collection.",
-        price: Math.round(99.99 * 100), // Convert 99.99 to 9999
-        image: "images/product_6.jpg"
+        name: "Panda Baby Wall Decor",
+        description: "Charming panda baby wall decor that adds a playful and adorable touch to any nursery or child's room.",
+        price: 9999, // Convert 99.99 to 9999
+        image: "images/P6.jpg"
     },
     {
         id: 7,
-        name: "Comfortable T-Shirt Dress",
-        description: "Effortlessly stylish and incredibly comfortable, this t-shirt dress is perfect for everyday wear. Pair it with sneakers for a casual look or dress it up with accessories.",
-        price: Math.round(109.99 * 100), // Convert 109.99 to 10999
-        image: "images/product_7.jpg"
+        name: "Wall Floating Shelf",
+        description: "A stylish and functional wall floating shelf that adds both storage and decorative appeal to any room.",
+        price: 10999, // Convert 109.99 to 10999
+        image: "images/P7.jpg"
     },
     {
         id: 8,
-        name: "Sophisticated Sheath Dress",
-        description: "Exude confidence and sophistication with this elegant sheath dress. Its sleek design and tailored fit are ideal for professional settings or upscale events.",
-        price: Math.round(119.99 * 100), // Convert 119.99 to 11999
-        image: "images/product_8.jpg"
+        name: "Transparent Acrylic Wall Clock",
+        description: "A sleek and modern wall clock crafted from clear acrylic, adding a minimalist and elegant touch to any room while keeping time with style.",
+        price: 11999, // Convert 119.99 to 11999
+        image: "images/P8.jpg"
     },
     {
         id: 9,
-        name: "Casual Denim Dress",
-        description: "A versatile and trendy denim dress for a relaxed yet stylish look. Perfect for any casual occasion, offering both comfort and durability.",
-        price: Math.round(129.99 * 100), // Convert 129.99 to 12999
-        image: "images/product_9.jpg"
+        name: "Artistic Flair Design Wall Art",
+        description: "An artistic flair design wall art piece that brings creativity and vibrancy to your living space, making it a focal point of any room.",
+        price: 12999, // Convert 129.99 to 12999
+        image: "images/P9.jpg"
     },
     {
         id: 10,
-        name: "Party Wear Sequin Dress",
-        description: "Shine bright at any party with this dazzling sequin dress. Designed to make a statement, it's perfect for special celebrations and glamorous nights.",
-        price: Math.round(139.99 * 100), // Convert 139.99 to 13999
-        image: "images/product_10.jpg"
+        name: "Ayat Al Kursi Calligraphy",
+        description: "A beautifully crafted calligraphy piece featuring Ayat Al Kursi, perfect for adding a spiritual and artistic touch to your home or office.",
+        price: 13999, // Convert 139.99 to 13999
+        image: "images/P10.jpg"
     },
     {
         id: 11,
-        name: "Striped Shirt Dress",
-        description: "A chic and modern striped shirt dress, combining comfort with a smart-casual aesthetic. Ideal for office wear or a stylish day out.",
-        price: Math.round(149.99 * 100), // Convert 149.99 to 14999
-        image: "images/product_11.jpg"
+        name: "Acrylic Vase with Tube Inlay",
+        description: "A chic and modern acrylic vase with tube inlay, perfect for adding a contemporary touch to your home decor.",
+        price: 14999, // Convert 149.99 to 14999
+        image: "images/P11.jpg"
     },
     {
         id: 12,
-        name: "Elegant Lace Dress",
-        description: "Embrace timeless elegance with this beautiful lace dress. Perfect for weddings, formal events, or any occasion where you want to look exquisite.",
-        price: Math.round(159.99 * 100), // Convert 159.99 to 15999
-        image: "images/product_12.jpg"
+        name: "Lake River Gloss Wall Decor",
+        description: "Embrace timeless elegance with this beautiful lake river gloss wall decor. Perfect for adding a sophisticated touch to any room or office.",
+        price: 15999, // Convert 159.99 to 15999
+        image: "images/P12.jpg"
     }
 ];
 

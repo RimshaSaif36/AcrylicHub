@@ -47,56 +47,55 @@ document.addEventListener('DOMContentLoaded', () => {
     const subtotalPriceElement = document.querySelector('.subtotal-price');
     const totalPriceElement = document.querySelector('.total-price span');
 
-    const renderCartItems = () => {
-        cartItemsContainer.innerHTML = ''; // Clear existing items
-        if (cart.length === 0) {
-            cartItemsContainer.innerHTML = '<p style="text-align: center; padding: 20px;">Your cart is empty.</p>';
-            subtotalPriceElement.textContent = `PKR 0`;
-            totalPriceElement.textContent = `PKR ${shippingPrice}`;
+   const renderCartItems = () => {
+    cartItemsContainer.innerHTML = ''; // Clear existing items
+    if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '<p style="text-align: center; padding: 20px;">Your cart is empty.</p>';
+        subtotalPriceElement.textContent = `PKR 0`;
+        totalPriceElement.textContent = `PKR ${shippingPrice}`;
+        return;
+    }
+
+    let subtotal = 0;
+    cart.forEach(item => {
+        let cleanPrice = String(item.price).replace(/,/g, '');
+        const itemPrice = parseFloat(cleanPrice);
+
+        if (isNaN(itemPrice)) {
+            console.error("Invalid price encountered:", item.price);
             return;
         }
 
-        let subtotal = 0;
-        cart.forEach(item => {
-            // Ensure price is a number before calculation
-            // If item.price is a string with commas, parseFloat will stop at the comma.
-            // So, we need to remove commas if they exist.
-            let cleanPrice = String(item.price).replace(/,/g, '');
-            const itemPrice = parseFloat(cleanPrice);
+        // ✅ Convert price to PKR by dividing by 100
+        const itemPricePKR = itemPrice ;
+        const itemTotal = itemPricePKR * item.quantity;
+        subtotal += itemTotal;
 
-            // Check if itemPrice is a valid number
-            if (isNaN(itemPrice)) {
-                console.error("Invalid price encountered:", item.price);
-                return; // Skip this item or handle error appropriately
-            }
+        const cartItemElement = document.createElement('div');
+        cartItemElement.classList.add('cart-item-row');
+        cartItemElement.innerHTML = `
+            <div class="product-info-cell">
+                <img src="${item.image}" alt="${item.name}" title="${item.name}">
+                <span class="item-name">${item.name}</span>
+            </div>
+            <div class="item-price">PKR ${itemPricePKR.toFixed(0)}</div>
+            <div class="quantity-control">
+                <button class="quantity-btn minus" data-id="${item.id}">-</button>
+                <input type="text" class="quantity" value="${item.quantity}" readonly>
+                <button class="quantity-btn plus" data-id="${item.id}">+</button>
+            </div>
+            <div class="item-total-cell">PKR ${itemTotal.toFixed(0)}</div>
+            <div class="item-remove-cell">
+                <button class="remove-item" data-id="${item.id}">Remove</button>
+            </div>
+        `;
+        cartItemsContainer.appendChild(cartItemElement);
+    });
 
-            const itemTotal = itemPrice * item.quantity;
-            subtotal += itemTotal;
+    subtotalPriceElement.textContent = `PKR ${subtotal.toFixed(0)}`;
+    totalPriceElement.textContent = `PKR ${(subtotal + shippingPrice).toFixed(0)}`;
+};
 
-            const cartItemElement = document.createElement('div');
-            cartItemElement.classList.add('cart-item-row');
-            cartItemElement.innerHTML = `
-                <div class="product-info-cell">
-                    <img src="${item.image}" alt="${item.name}" title="${item.name}">
-                    <span class="item-name">${item.name}</span>
-                </div>
-                <div class="item-price">PKR ${itemPrice.toFixed(0)}</div>
-                <div class="quantity-control">
-                    <button class="quantity-btn minus" data-id="${item.id}">-</button>
-                    <input type="text" class="quantity" value="${item.quantity}" readonly>
-                    <button class="quantity-btn plus" data-id="${item.id}">+</button>
-                </div>
-                <div class="item-total-cell">PKR ${itemTotal.toFixed(0)}</div>
-                <div class="item-remove-cell">
-                    <button class="remove-item" data-id="${item.id}">Remove</button>
-                </div>
-            `;
-            cartItemsContainer.appendChild(cartItemElement);
-        });
-
-        subtotalPriceElement.textContent = `PKR ${subtotal.toFixed(0)}`;
-        totalPriceElement.textContent = `PKR ${(subtotal + shippingPrice).toFixed(0)}`;
-    };
 
     cartItemsContainer.addEventListener('click', (event) => {
         const target = event.target;

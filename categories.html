@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acrylic Products Categories</title>
+    <style>
+        /* Basic Styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Category Buttons Styling */
+        .category-filter {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .category-btn {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #e2e6ea;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+        .category-btn:hover, .category-btn.active {
+            background-color: #007bff;
+            color: white;
+        }
+        /* Product Grid Styling */
+        #product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        .product-card h4 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .product-card.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>✨ Acrylic Products Categories</h1>
+    </header>
+
+    <div class="container">
+        <div class="category-filter">
+            <button class="category-btn active" onclick="filterProducts('all')">All Products</button>
+            <button class="category-btn" onclick="filterProducts('sheets')">Acrylic Sheets</button>
+            <button class="category-btn" onclick="filterProducts('displays')">Display Stands</button>
+            <button class="category-btn" onclick="filterProducts('furniture')">Furniture</button>
+            <button class="category-btn" onclick="filterProducts('art')">Art & Craft</button>
+        </div>
+
+        <div id="product-list">
+            <div class="product-card" data-category="sheets">
+                <h4>Clear Cast Acrylic Sheet</h4>
+                <p>High-quality transparent material for fabrication.</p>
+            </div>
+            <div class="product-card" data-category="displays">
+                <h4>Acrylic Sign Holder</h4>
+                <p>A-frame display for menus or advertisements.</p>
+            </div>
+            <div class="product-card" data-category="furniture">
+                <h4>Ghost Chair</h4>
+                <p>Modern, transparent acrylic dining chair.</p>
+            </div>
+            <div class="product-card" data-category="art">
+                <h4>Acrylic Paint Set</h4>
+                <p>Vibrant colors for artists and crafters.</p>
+            </div>
+            <div class="product-card" data-category="sheets">
+                <h4>Colored Extruded Sheet</h4>
+                <p>Available in various colors and thicknesses.</p>
+            </div>
+            <div class="product-card" data-category="displays">
+                <h4>Tiered Cupcake Stand</h4>
+                <p>Multi-level stand for desserts and collectibles.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container" style="text-align: center; margin-top: 40px; border-top: 1px solid #ddd;">
+            <p>&copy; 2025 Acrylic Solutions</p>
+        </div>
+    </footer>
+
+    <script>
+        /**
+         * Filters the product list based on the selected category.
+         * @param {string} category - The category to filter by ('all', 'sheets', 'displays', etc.).
+         */
+        function filterProducts(category) {
+            const products = document.querySelectorAll('.product-card');
+            const buttons = document.querySelectorAll('.category-btn');
+
+            // 1. Update active button state
+            buttons.forEach(btn => {
+                // Remove 'active' class from all buttons
+                btn.classList.remove('active');
+                // Add 'active' class to the button that was clicked
+                if (btn.textContent.toLowerCase().includes(category.replace('all', 'all products'))) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // 2. Loop through products and show/hide them
+            products.forEach(product => {
+                const productCategory = product.getAttribute('data-category');
+
+                if (category === 'all' || productCategory === category) {
+                    product.classList.remove('hidden');
+                } else {
+                    product.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-/* Cart Message */
+Cart Message
 .cart-message {
     position: fixed;
     top: 20px;
@@ -54,14 +54,14 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #112916;
+    background-color: #0d1a2a;
     color: #fff;
 }
 
 .logo a.logo-text {
     font-size: 2.2rem; /* Slightly larger */
     font-weight: normal; /* Not bold */
-    color: #f3ec78; /* Keep the gold-yellow color */
+    color:#9bb7c2; /* Keep the gold-yellow color */
     font-family: 'Georgia', 'Palatino Linotype', Palatino, serif; /* More elegant font */
     letter-spacing: 2px; /* Add some letter spacing */
     text-transform: uppercase; /* Make it uppercase */
@@ -83,7 +83,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #f3ec78;
+    color: #9bb7c2;
 }
 
 
@@ -141,13 +141,13 @@ footer {
 .footer-column .logo-text {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #f3ec78;
+    color: #9bb7c2;
     margin-bottom: 1rem;
     display: block;
 }
 
 .footer-column h3 {
-    color: #f3ec78;
+    color: #9bb7c2;
     margin-bottom: 1rem;
     font-size: 1.2rem;
 }
@@ -178,7 +178,7 @@ footer {
 }
 
 .social-media a:hover {
-    color: #f3ec78;
+    color: #9bb7c2;
 }
 
 .social-media a svg {
@@ -203,7 +203,7 @@ footer {
 .newsletter button {
     padding: 0.5rem 1rem;
     border: none;
-    background: #f3ec78;
+    background: #9bb7c2;
     color: #333;
     cursor: pointer;
     border-radius: 0 3px 3px 0;
@@ -211,7 +211,7 @@ footer {
 }
 
 .newsletter button:hover {
-    background-color: #e0d466;
+    background-color: #9bb7c2;
 }
 
 .footer-bottom {
@@ -266,7 +266,7 @@ footer {
 .shop-products .product-item .price {
     font-size: 1.1rem;
     font-weight: bold;
-    color: #f3ec78;
+    color: #9bb7c2;
     margin-bottom: 1rem;
 }
 
@@ -295,12 +295,12 @@ footer {
 }
 
 .shop-products .product-actions .add-to-cart {
-    background-color: #f3ec78;
+    background-color: #9bb7c2;
     color: #333;
 }
 
 .shop-products .product-actions .add-to-cart:hover {
-    background-color: #e0d466;
+    background-color: #9bb7c2;
 }
 
 
@@ -353,7 +353,7 @@ footer {
 .product-info .product-price {
     font-size: 2rem;
     font-weight: bold;
-    color: #f3ec78;
+    color: #9bb7c2;
     margin-bottom: 1.5rem;
 }
 
@@ -382,7 +382,7 @@ footer {
     padding: 1rem 2rem;
     border: none;
     border-radius: 5px;
-    background-color: #f3ec78;
+    background-color: #9bb7c2;
     color: #333;
     font-size: 1.2rem;
     font-weight: bold;
@@ -391,7 +391,7 @@ footer {
 }
 
 .add-to-cart-detail:hover {
-    background-color: #e0d466;
+    background-color: #dbe5eb;
 }
 
 
@@ -431,7 +431,7 @@ footer {
 }
 
 .cart-table-header {
-    background-color: #f3ec78;
+    background-color: #9bb7c2;
     font-weight: bold;
     color: #333;
     border-top-left-radius: 8px;
@@ -489,7 +489,7 @@ footer {
 }
 
 .quantity-btn:hover {
-    background-color: #e0d466;
+    background-color: #dbe5eb;
 }
 
 .quantity {
@@ -554,7 +554,7 @@ footer {
     display: block;
     width: 100%;
     padding: 1rem;
-    background-color: #f3ec78;
+    background-color: #9bb7c2;
     color: #333;
     border: none;
     border-radius: 5px;
@@ -567,7 +567,7 @@ footer {
 }
 
 .checkout-button:hover {
-    background-color: #e0d466;
+    background-color: #dbe5eb;
 }
 
 @media (max-width: 768px) {
@@ -625,7 +625,7 @@ footer {
     content: '';
     width: 80px;
     height: 4px;
-    background-color: #f3ec78;
+    background-color: #9bb7c2;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -655,7 +655,7 @@ footer {
 .brand-story h3,
 .brand-mission h3 {
     font-size: 2rem;
-    color: #f3ec78;
+    color: #9bb7c2;
     margin-bottom: 1.5rem;
     text-align: center;
 }
@@ -689,7 +689,7 @@ footer {
 
 .brand-mission ul li::before {
     content: '✓';
-    color: #f3ec78;
+    color: #9bb7c2;
     position: absolute;
     left: 0;
     font-weight: bold;
@@ -747,7 +747,7 @@ footer {
     content: '';
     width: 80px;
     height: 4px;
-    background-color: #f3ec78;
+    background-color: #9bb7c2;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -777,7 +777,7 @@ footer {
 .contact-form-container h3,
 .contact-info h3 {
     font-size: 2rem;
-    color: #f3ec78;
+    color: #9bb7c2;
     margin-bottom: 1.5rem;
     text-align: center;
 }
@@ -810,7 +810,7 @@ footer {
     display: block;
     width: 100%;
     padding: 1rem;
-    background-color: #f3ec78;
+    background-color: #9bb7c2;
     color: #333;
     border: none;
     border-radius: 5px;
@@ -823,7 +823,7 @@ footer {
 }
 
 .submit-btn:hover {
-    background-color: #e0d466;
+    background-color: #dbe5eb;
 }
 
 .social-links {
@@ -844,7 +844,7 @@ footer {
 }
 
 .social-icon:hover {
-    color: #f3ec78;
+    color: #9bb7c2;
 }
 
 .social-icon svg {
@@ -968,3 +968,4 @@ footer {
         gap: 1rem;
     }
 }
+

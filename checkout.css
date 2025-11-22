@@ -34,12 +34,11 @@
     border-radius: 5px;
     font-size: 1rem;
 }
-
 .place-order-btn {
     display: block;
     width: 100%;
     padding: 1rem;
-    background-color: #f3ec78;
+    background-color: #9bb7c2;
     color: #333;
     border: none;
     border-radius: 5px;
@@ -52,5 +51,5 @@
 }
 
 .place-order-btn:hover {
-    background-color: #e0d466;
+    background-color: #dbe5eb;
 }
