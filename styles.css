@@ -61,7 +61,7 @@ header {
 .logo a.logo-text {
     font-size: 2.2rem; /* Slightly larger */
     font-weight: normal; /* Not bold */
-    color:#9bb7c2; /* Keep the gold-yellow color */
+    color:#fff; /* Keep the gold-yellow color */
     font-family: 'Georgia', 'Palatino Linotype', Palatino, serif; /* More elegant font */
     letter-spacing: 2px; /* Add some letter spacing */
     text-transform: uppercase; /* Make it uppercase */
